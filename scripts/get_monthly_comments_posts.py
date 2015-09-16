@@ -5,13 +5,15 @@
 from dateutil.parser import parse
 #date, comnts_cnt
 
-input = open('../post_date_commts.txt','r')
+input = open('tmp/post_date_commts.txt','r')
 
 month = ''
 month_prev = ''
 comments_cnt = ''
 comm = 0
 posts = 0
+
+print "month,comments_count,post_count"
 
 for line in input.readlines():
 
@@ -37,7 +39,8 @@ for line in input.readlines():
         # if month_prev > 10:
             # month_prev = '0'+str(month_prev)
         # print date_
-        print str(year_prev)+'-'+month_prev+'-01'+'\t'+str(comm)+'\t'+str(posts)
+        print str(year_prev)+'-'+month_prev+'-01'+','+str(comm)+','+str(posts)
+        # print str(year_prev)+'-'+month_prev+'-01'+'\t'+str(comm)+'\t'+str(posts)
         # print
         comm = 0
         posts = 0
