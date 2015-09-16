@@ -1,9 +1,5 @@
 #!/usr/bin/env python2
 # -*- coding: UTF-8 -*-
-# import time
-# import datetime
-from dateutil.parser import parse
-#date, comnts_cnt
 
 input = open('tmp/post_date_commts.txt','r')
 

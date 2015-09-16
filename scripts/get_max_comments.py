@@ -1,7 +1,5 @@
 #!/usr/bin/env python2
 # -*- coding: UTF-8 -*-
-# import time
-# import datetime
 
 input = open('post_date_commts.txt','r')
 
