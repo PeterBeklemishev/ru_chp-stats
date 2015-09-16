@@ -1,3 +1,7 @@
+#set terminal png size 400,300 enhanced fname 'arial'  fsize 10 butt solid
+#set output 'out.svg'
+
+set datafile separator ","
 
 set xdata time
 set timefmt "%Y-%m-%d"
@@ -16,6 +20,6 @@ set y2label 'Количество постов'
 set ylabel 'Количество комментариев'
 
 
-plot  "comments_posts_monthly.txt" using 1:2 title 'Комментарии' with lines, "comments_posts_monthly.txt" using 1:(INCR*$3) title 'Посты' with lines
+plot  "results/comments_posts_monthly.csv" using 1:2 title 'Комментарии' with lines skip 1, "comments_posts_monthly.txt" using 1:(INCR*$3) title 'Посты' with lines skip 1
 
-pause -1
+#pause -1
