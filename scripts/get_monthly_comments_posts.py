@@ -5,7 +5,7 @@
 from dateutil.parser import parse
 #date, comnts_cnt
 
-input = open('posts_date_comments.txt','r')
+input = open('../post_date_commts.txt','r')
 
 month = ''
 month_prev = ''
@@ -16,8 +16,8 @@ posts = 0
 for line in input.readlines():
 
     line_cont = [x for x in line.split('\t')]
-    date_ = line_cont[0]
-    comments_cnt = line_cont[1]
+    date_ = line_cont[1]
+    comments_cnt = line_cont[2]
 
     time_ = date_[11:len(date_)-6]
     date_ = date_[0:10]
